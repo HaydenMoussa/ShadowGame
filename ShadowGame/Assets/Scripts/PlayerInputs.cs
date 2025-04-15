@@ -1,7 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerInputs : MonoBehaviour
 {
     //From https://www.youtube.com/watch?v=f473C43s8nE tutorial
 
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
     Vector3 moveDirection;
     Rigidbody rb;
+
 
     private void Start()
     {
