@@ -8,6 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 1eb3aa3fe04ff40ad9c847ba29c4167f
+  - enabled: 1
+    path: Assets/Scenes/Winter Scene.unity
+    guid: 57b4f53a9913c41428b4c9b1ae27f9a8
+  - enabled: 1
+    path: Assets/Scenes/Fall Scene.unity
+    guid: d09db7fd78e87405e99b97ed212572aa
+  - enabled: 1
+    path: Assets/Scenes/Summer Scene.unity
+    guid: 2d61909c289ea4ec28490431d5c2a4cd
+  - enabled: 1
+    path: Assets/Scenes/Spring Scene.unity
+    guid: 312a5270733394af7912a9d57f6adf44
+  - enabled: 1
+    path: Assets/Scenes/Demo Complete.unity
+    guid: 53e211d58e9a5446e927b0f4a5a3d199
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
