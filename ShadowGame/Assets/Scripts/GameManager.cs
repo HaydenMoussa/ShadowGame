@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    [SerializeField] Slider timeSlider;
+
+    public bool levelEnded = false;
 
     //Light Stuff
     public Vector3 lightDirection = new Vector3(50, -30, 0);
@@ -40,6 +45,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //updateLightDirection(new Vector3(0, 0, 0));
+        if (timeSlider) 
+        {
+            time = timeSlider.value;
+        }
         lightDirection = timeToLightDirection(time);
         directionalLight.transform.rotation = Quaternion.Euler(lightDirection);
     }

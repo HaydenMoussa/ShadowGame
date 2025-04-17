@@ -50,6 +50,10 @@ public class ShadowDetection : MonoBehaviour
         }
 
         Debug.Log("Hit is " + inShadow);
+        if (inShadow) 
+        {
+            GameManager.Instance.levelEnded = true;
+        }
 
     }
 }
