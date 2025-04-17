@@ -10512,6 +10512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharp_Rock_3
       objectReference: {fileID: 0}
+    - target: {fileID: 704919979832897230, guid: a162d5ac05c9a44b2a1da00cd6864666, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13281,7 +13285,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 2924dc40f6141404a89f2e38832b88a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1122460718}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 2924dc40f6141404a89f2e38832b88a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903539810}
   m_SourcePrefab: {fileID: 100100000, guid: 2924dc40f6141404a89f2e38832b88a3, type: 3}
 --- !u!4 &1833311019 stripped
 Transform:
@@ -13837,6 +13844,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2658186413973060186, guid: 7a91bca74e8b8574dbb2ef5d02bd82c3, type: 3}
   m_PrefabInstance: {fileID: 1894942436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1903539806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 2924dc40f6141404a89f2e38832b88a3, type: 3}
+  m_PrefabInstance: {fileID: 1833311018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1903539810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903539806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfd58a954831f844ab12477fbb8c817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointHolder: {fileID: 1122460717}
 --- !u!1001 &1906070798
 PrefabInstance:
   m_ObjectHideFlags: 0
