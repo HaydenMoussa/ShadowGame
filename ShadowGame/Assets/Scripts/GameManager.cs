@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
     public Vector3 lightDirection = new Vector3(50, -30, 0);
     private GameObject directionalLight;
 
+    [Range(6.0f, 18.0f)] public float time;
+
     public void updateLightDirection(Vector3 deltaDir) 
     {
         lightDirection += deltaDir;
-        directionalLight.transform.rotation = Quaternion.Euler(lightDirection);
+        //directionalLight.transform.rotation = Quaternion.Euler(lightDirection);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,6 +39,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateLightDirection(new Vector3(0, 0, 0));
+        //updateLightDirection(new Vector3(0, 0, 0));
+        lightDirection = timeToLightDirection(time);
+        directionalLight.transform.rotation = Quaternion.Euler(lightDirection);
+    }
+
+    private Vector3 timeToLightDirection(float time) 
+    {
+        float slope = (270 - 90) / (18 - 6);
+        float azimuth = 90 + slope * (time - 6);
+        double altitude = (-azimuth + 90) * (azimuth - 270) * (0.00679);
+        return new Vector3((float)altitude, azimuth, 0);
     }
 }
