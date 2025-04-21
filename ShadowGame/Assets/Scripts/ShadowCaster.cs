@@ -29,7 +29,16 @@ public class ShadowCaster : MonoBehaviour
 
     private void FixedUpdate()
     {
-        changeCameraAngle();
+        if(lightDirection.x % 360 < 170 && lightDirection.x % 360 > 10) 
+        {
+            shadowProjector.gameObject.SetActive(true);
+            changeCameraAngle();
+        }
+        else 
+        {
+            shadowProjector.gameObject.SetActive(false);
+        }
+        
     }
 
     private void changeCameraAngle() 
