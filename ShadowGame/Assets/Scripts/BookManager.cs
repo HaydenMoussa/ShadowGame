@@ -42,9 +42,7 @@ public class BookManager : MonoBehaviour
     }
     void Start()
     {
-        closedBook = transform.GetChild(1).gameObject;
         openBook = transform.GetChild(0).gameObject;
-        closedBook.transform.localPosition = new Vector3(xOff.x,yOff.x, zOff.x);
         openBook.transform.localPosition = new Vector3(xOff.x,yOff.x, zOff.x);
     }
 
@@ -73,7 +71,6 @@ public class BookManager : MonoBehaviour
                 openBook.transform.localScale += toScale;
             }
         } 
-        closedBook.transform.localPosition = new Vector3(xOff.x,yOff.x, zOff.x);
     }
 
     public void activate() {
