@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -67,5 +68,10 @@ public class GameManager : MonoBehaviour
         float azimuth = 90 + slope * (time - 6);
         double altitude = (-azimuth + 90) * (azimuth - 270) * (0.00679);
         return new Vector3((float)altitude, azimuth, 0);
+    }
+
+    public void changeLevel(string levelName) 
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }

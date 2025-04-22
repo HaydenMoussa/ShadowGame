@@ -34,6 +34,9 @@
         },
         {
             "m_Id": "5072685e11a240a1910b75f9d852f4c7"
+        },
+        {
+            "m_Id": "7a2870afd2724c389c415de9f464cd65"
         }
     ],
     "m_GroupDatas": [],
@@ -328,6 +331,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "4a5eae30b5a94c33afc3b396da3e4d1e",
+    "m_Id": 0,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "5072685e11a240a1910b75f9d852f4c7",
     "m_Group": {
@@ -384,6 +412,50 @@
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true,
     "m_MipSamplingMode": 0
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ColorNode",
+    "m_ObjectId": "7a2870afd2724c389c415de9f464cd65",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Color",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -560.5714111328125,
+            "y": 114.28572845458985,
+            "width": 209.14285278320313,
+            "height": 127.42859649658203
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "4a5eae30b5a94c33afc3b396da3e4d1e"
+        }
+    ],
+    "synonyms": [
+        "rgba"
+    ],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Color": {
+        "color": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 0.0
+        },
+        "mode": 0
+    }
 }
 
 {
@@ -654,9 +726,9 @@
     "m_ShaderOutputName": "BaseColor",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 1.0,
+        "x": 0.06783151626586914,
         "y": 0.0,
-        "z": 0.8931102752685547
+        "z": 1.0
     },
     "m_DefaultValue": {
         "x": 0.5,
