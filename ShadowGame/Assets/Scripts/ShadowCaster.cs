@@ -15,6 +15,8 @@ public class ShadowCaster : MonoBehaviour
     [SerializeField] float distanceFromPoint;
     [SerializeField] Transform rotationPoint;
 
+    [SerializeField] float shadowTurnOffAngleMax = 180;
+    [SerializeField] float shadowTurnOffAngleMin = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +31,7 @@ public class ShadowCaster : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(lightDirection.x % 360 < 170 && lightDirection.x % 360 > 10) 
+        if(lightDirection.x % 360 < shadowTurnOffAngleMax && lightDirection.x % 360 > shadowTurnOffAngleMin) 
         {
             shadowProjector.gameObject.SetActive(true);
             changeCameraAngle();
