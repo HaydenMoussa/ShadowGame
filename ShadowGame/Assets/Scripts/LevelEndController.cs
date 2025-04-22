@@ -23,5 +23,6 @@ public class LevelEndController : MonoBehaviour
     void levelEnded() 
     {
         levelPassedLight.gameObject.SetActive(true);
+
     }
 }
