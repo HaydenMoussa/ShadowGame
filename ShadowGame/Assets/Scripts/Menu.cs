@@ -11,17 +11,20 @@ public class Menu : MonoBehaviour
 
     public void OnCredits()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void OnControls()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void MenuBack()
     {
         Debug.Log("Click back");
         SceneManager.LoadScene(0);
+    }
+    public void LevelSelect(){
+        SceneManager.LoadScene(2);
     }
 }
