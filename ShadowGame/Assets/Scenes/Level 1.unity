@@ -3368,6 +3368,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4819824533634261370, guid: 35b3929beda06b1458142759be5f02ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.735
+      objectReference: {fileID: 0}
     - target: {fileID: 7527959875055452285, guid: 35b3929beda06b1458142759be5f02ee, type: 3}
       propertyPath: m_Name
       value: BookManager
