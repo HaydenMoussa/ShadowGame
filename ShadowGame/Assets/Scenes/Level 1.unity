@@ -795,23 +795,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4244246084523015375, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244246084523015375, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7483373116745379319, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: ae80d2e934bc8f3458b420b80ebaa2bd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
+--- !u!4 &64801340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4244246084523015375, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
+  m_PrefabInstance: {fileID: 64801339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &64801341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7483373116745379319, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
+  m_PrefabInstance: {fileID: 64801339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &64801342 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3790442621770552660, guid: ea975bcff24c1e843bda4b765a8f8628, type: 3}
+  m_PrefabInstance: {fileID: 64801339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &71913891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2292,12 +2301,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672c30c9cb61a1a45be8b512336a8388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadowCamera: {fileID: 0}
-  shadowProjector: {fileID: 0}
-  distanceFromPoint: 0
-  rotationPoint: {fileID: 0}
+  shadowCamera: {fileID: 64801342}
+  shadowProjector: {fileID: 64801341}
+  distanceFromPoint: 3
+  rotationPoint: {fileID: 64801340}
   shadowTurnOffAngleMax: 180
-  shadowTurnOffAngleMin: 10
+  shadowTurnOffAngleMin: 5
 --- !u!1001 &263917851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16240,6 +16249,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: bfcfcf03589499346b24e110b74a3822, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bfcfcf03589499346b24e110b74a3822, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: bfcfcf03589499346b24e110b74a3822, type: 3}
       propertyPath: m_Convex
