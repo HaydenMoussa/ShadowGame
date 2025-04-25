@@ -17,6 +17,10 @@ public class SensitivityManager : MonoBehaviour
     
     private const string SensitivityPrefKey = "MouseSensitivity";
 
+    public GameObject PauseMenuUI;
+    private bool inOptions = false;
+    public GameObject OptionsMenuUI;
+
     void Start()
     {
         // Validate references
@@ -82,5 +86,15 @@ public class SensitivityManager : MonoBehaviour
         {
             sensitivityValueText.text = value.ToString("F0");
         }
+    }
+
+    public void UpdatePauseToOptions(){
+        PauseMenuUI.SetActive(false);
+        OptionsMenuUI.SetActive(true);
+    }
+    public void UpdatePauseToMain(){
+        PauseMenuUI.SetActive(true);
+        OptionsMenuUI.SetActive(false);
+
     }
 }
