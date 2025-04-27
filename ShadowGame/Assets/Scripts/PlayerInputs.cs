@@ -35,6 +35,11 @@ public class PlayerInputs : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        if (GameManager.Instance.hasSavedPlayerPos) 
+        {
+            transform.position = GameManager.Instance.savedPlayerPos;
+            GameManager.Instance.hasSavedPlayerPos = false;
+        }
     }
     private void Update()
     {

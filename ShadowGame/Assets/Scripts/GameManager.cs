@@ -75,4 +75,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
+
+    public bool hasSavedPlayerPos = false;
+    public Vector3 savedPlayerPos;
+
+    public void switchSceneButKeepPlayerPos(string levelName, Vector3 posToSave) 
+    {
+        hasSavedPlayerPos = true;
+        savedPlayerPos = posToSave;
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
 }
