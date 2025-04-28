@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - TrackingObject
+  - Book
   layers:
   - Default
   - TransparentFX

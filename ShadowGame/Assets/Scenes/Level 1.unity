@@ -20667,6 +20667,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: m_TagString
+      value: Book
+      objectReference: {fileID: 0}
     - target: {fileID: 8639946671485474045, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_Name
       value: BookManager
