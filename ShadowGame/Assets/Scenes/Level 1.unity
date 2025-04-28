@@ -6092,6 +6092,7 @@ MonoBehaviour:
   timeSlider: {fileID: 1138868432}
   levelEnded: 0
   lightDirection: {x: 50, y: -30, z: 0}
+  compass: {fileID: 2136744412}
   time: 6
   hasSavedPlayerPos: 0
   savedPlayerPos: {x: 0, y: 0, z: 0}
@@ -20348,7 +20349,6 @@ GameObject:
   - component: {fileID: 2136744413}
   - component: {fileID: 2136744415}
   - component: {fileID: 2136744414}
-  - component: {fileID: 2136744416}
   m_Layer: 5
   m_Name: Inner
   m_TagString: Untagged
@@ -20415,18 +20415,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136744412}
   m_CullTransparentMesh: 1
---- !u!114 &2136744416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136744412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ccbe6f11b774480e208b14d45c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2147303292
 GameObject:
   m_ObjectHideFlags: 0

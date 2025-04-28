@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public Vector3 lightDirection = new Vector3(50, -30, 0);
     private GameObject directionalLight;
 
+    public GameObject compass;
+
     [Range(6.0f, 18.0f)] public float time;
 
     public void updateLightDirection(Vector3 deltaDir) 
@@ -49,10 +51,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey("g"))
         {
             timeSlider.value -= 3 * Time.deltaTime;
+            //compass.transform.Rotate(0,0,50 * Time.deltaTime);
         }
         if (Input.GetKey("h"))
         {
             timeSlider.value += 3 * Time.deltaTime;
+            //compass.transform.Rotate(0,0,-50 * Time.deltaTime);
         }
         //updateLightDirection(new Vector3(0, 0, 0));
         if (timeSlider) 
@@ -61,6 +65,7 @@ public class GameManager : MonoBehaviour
         }
         lightDirection = timeToLightDirection(time);
         directionalLight.transform.rotation = Quaternion.Euler(lightDirection);
+        compass.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -time * 10));
     }
 
     private Vector3 timeToLightDirection(float time) 
