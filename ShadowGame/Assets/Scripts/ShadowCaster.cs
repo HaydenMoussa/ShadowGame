@@ -10,6 +10,8 @@ public class ShadowCaster : MonoBehaviour
 
     Vector3 lightDirection;
     [SerializeField] Camera shadowCamera;
+    [SerializeField] Camera rockCamera;
+
     //[SerializeField] Projector shadowProjector;
     [SerializeField] DecalProjector shadowProjector;
     [SerializeField] float distanceFromPoint;
@@ -46,7 +48,13 @@ public class ShadowCaster : MonoBehaviour
     private void changeCameraAngle() 
     {
         shadowCamera.transform.rotation = Quaternion.Euler(lightDirection);
+        rockCamera.transform.rotation = Quaternion.Euler(lightDirection);
         shadowProjector.transform.rotation = Quaternion.Euler(lightDirection);
+        var direction = Quaternion.Euler(lightDirection);
+
+        shadowCamera.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
+        rockCamera.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
+        shadowProjector.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
         //var angle = Mathf.Deg2Rad * lightDirection.x;
         //var tilt = Mathf.Deg2Rad * lightDirection.y;
         //var x = distanceFromPoint * Mathf.Cos(angle);
@@ -55,10 +63,10 @@ public class ShadowCaster : MonoBehaviour
         //var z = distanceFromPoint * Mathf.Sin(angle) * Mathf.Cos(tilt);
         //Vector3 targetPosition = new Vector3 (x, y, z);
         //Debug.Log(targetPosition);
-        var direction = Quaternion.Euler(lightDirection);
+        /*var direction = Quaternion.Euler(lightDirection);
 
         shadowCamera.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
-        shadowProjector.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
+        shadowProjector.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;*/
 
         /*var raycastDirection = GameManager.Instance.lightDirection;
         raycastDirection = -(Quaternion.Euler(raycastDirection) * Vector3.forward);
