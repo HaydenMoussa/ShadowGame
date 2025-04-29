@@ -8,6 +8,10 @@ public class ShadowDetection : MonoBehaviour
 
     [SerializeField] private bool GemStoneRequired = false;
 
+    [SerializeField] private float timeTillDoorOpens = 2f;
+
+    private float timer = 0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,6 +65,7 @@ public class ShadowDetection : MonoBehaviour
                 }
                 else
                 {
+                    
                     Debug.DrawRay(point, raycastDirection * 10000, Color.white);
                     //Debug.Log("Did not Hit");
                     inShadow = false;
@@ -71,9 +76,21 @@ public class ShadowDetection : MonoBehaviour
 
         Debug.Log("Hit is " + inShadow);
 
-        if (inShadow) 
+        if (inShadow)
         {
-            GameManager.Instance.levelEnded = true;
+            if (timer > timeTillDoorOpens)
+            {
+                GameManager.Instance.levelEnded = true;
+            }
+            else 
+            {
+                timer += Time.deltaTime;
+            }
+            
+        }
+        else 
+        {
+            timer = 0;
         }
     }
 }
