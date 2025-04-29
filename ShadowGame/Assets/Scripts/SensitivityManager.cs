@@ -18,7 +18,7 @@ public class SensitivityManager : MonoBehaviour
     private const string SensitivityPrefKey = "MouseSensitivity";
 
     public GameObject PauseMenuUI;
-    private bool inOptions = false;
+    //private bool inOptions = false;
     public GameObject OptionsMenuUI;
 
     void Start()
