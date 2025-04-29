@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("k")) {
+            BookManager.Instance.activate();
+        }
         if (Input.GetKey("g"))
         {
             timeSlider.value -= 3 * Time.deltaTime;
