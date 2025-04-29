@@ -6,6 +6,12 @@ public class ShadowDetection : MonoBehaviour
     private Vector3 raycastDirection;
     [SerializeField] private GameObject pointHolder;
 
+    [SerializeField] private bool GemStoneRequired = false;
+
+    [SerializeField] private float timeTillDoorOpens = 2f;
+
+    private float timer = 0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,24 +42,55 @@ public class ShadowDetection : MonoBehaviour
 
             RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(point, raycastDirection, out hit, Mathf.Infinity, LayerMask.GetMask("ShadowCaster")))
+            if (GemStoneRequired)
             {
-                Debug.DrawRay(point, raycastDirection * 10000, Color.yellow);
-                //Debug.Log("Did Hit");
+                if (Physics.Raycast(point, raycastDirection, out hit, Mathf.Infinity, LayerMask.GetMask("Gemstone")))
+                {
+                    Debug.DrawRay(point, raycastDirection * 10000, Color.yellow);
+                    //Debug.Log("Did Hit");
+                }
+                else
+                {
+                    Debug.DrawRay(point, raycastDirection * 10000, Color.white);
+                    //Debug.Log("Did not Hit");
+                    inShadow = false;
+                }
             }
-            else
+            else 
             {
-                Debug.DrawRay(point, raycastDirection * 10000, Color.white);
-                //Debug.Log("Did not Hit");
-                inShadow = false;
+                if (Physics.Raycast(point, raycastDirection, out hit, Mathf.Infinity, LayerMask.GetMask("ShadowCaster")))
+                {
+                    Debug.DrawRay(point, raycastDirection * 10000, Color.yellow);
+                    //Debug.Log("Did Hit");
+                }
+                else
+                {
+                    
+                    Debug.DrawRay(point, raycastDirection * 10000, Color.white);
+                    //Debug.Log("Did not Hit");
+                    inShadow = false;
+                }
             }
+            
         }
 
         Debug.Log("Hit is " + inShadow);
 
-        if (inShadow) 
+        if (inShadow)
         {
-            GameManager.Instance.levelEnded = true;
+            if (timer > timeTillDoorOpens)
+            {
+                GameManager.Instance.levelEnded = true;
+            }
+            else 
+            {
+                timer += Time.deltaTime;
+            }
+            
+        }
+        else 
+        {
+            timer = 0;
         }
     }
 }
