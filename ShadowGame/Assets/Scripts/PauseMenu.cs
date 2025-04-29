@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -42,8 +43,12 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
     public void Quit(){
+        PauseMenuUI.SetActive(false);
+        TimeSlider.SetActive(true);
+        NoteBook.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        SceneManager.LoadScene(0);
     }
 
 
