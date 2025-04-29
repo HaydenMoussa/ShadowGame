@@ -5,8 +5,12 @@ public class PlayerCam : MonoBehaviour
 {
     //From https://www.youtube.com/watch?v=f473C43s8nE tutorial
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public static PlayerCam Instance { get; private set;}
     public float SensX = 400f;
     public float SensY = 400f;
+
+    public bool movement_active = true;
 
     // Keys for storing sensitivity in PlayerPrefs
     private const string SensXPrefKey = "SensitivityX";
@@ -14,6 +18,15 @@ public class PlayerCam : MonoBehaviour
     public Transform orientation;
     float xRotation;
     float yRotation;
+
+    void Awake()
+    {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -35,7 +48,7 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
-        if (Time.timeScale != 0)
+        if (Time.timeScale != 0 && movement_active)
         {
             //getting mouse input
             float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * SensX;

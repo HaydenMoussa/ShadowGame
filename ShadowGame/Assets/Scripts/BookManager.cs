@@ -7,6 +7,8 @@ public class BookManager : MonoBehaviour
 
     public GameObject closedBook;
 
+    public GameObject testObj;
+
     public GameObject openBook;
 
     public bool bookState;
@@ -22,7 +24,7 @@ public class BookManager : MonoBehaviour
 
     public Vector2 zScale = new Vector2(0.43f, 1.1f);
 
-
+    public Camera playercam;
     public Vector3 goalPos;
 
     public Vector3 goalScale;
@@ -42,6 +44,7 @@ public class BookManager : MonoBehaviour
     }
     void Start()
     {
+        playercam = PlayerCam.Instance.gameObject.GetComponent<Camera>();
         openBook = transform.GetChild(0).gameObject;
         openBook.transform.localPosition = new Vector3(xOff.x,yOff.x, zOff.x);
     }
@@ -49,9 +52,13 @@ public class BookManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Testing
-        if(Input.GetKeyDown(KeyCode.K)) {
-            activate();
+        RaycastHit hit;
+        Ray ray = playercam.ScreenPointToRay(Input.mousePosition);
+        
+        if (Physics.Raycast(ray, out hit)) {
+            Transform objectHit = hit.transform;
+            print(hit.transform.gameObject.tag);
+            testObj.transform.position = hit.point;
         }
         if(movingSwitch) {
             Vector3 dist = (goalPos - openBook.transform.localPosition);
@@ -77,6 +84,9 @@ public class BookManager : MonoBehaviour
         bookState = !bookState;
         if(bookState) {
             //Replace closed with open. Scale open book up while moving to center of screen.
+            PlayerCam.Instance.movement_active = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             openBook.SetActive(true);
             closedBook.SetActive(false);
             goalPos = new Vector3(xOff.y, yOff.y, zOff.y);
@@ -84,6 +94,9 @@ public class BookManager : MonoBehaviour
             movingSwitch = true;
 
         } else {
+            PlayerCam.Instance.movement_active = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             goalPos = new Vector3(xOff.x, yOff.x, zOff.x);
             goalScale = new Vector3(xScale.x, yScale.x, zScale.x);
             movingSwitch = true;
