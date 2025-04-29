@@ -3,15 +3,27 @@ using UnityEngine;
 public class ClockManager : MonoBehaviour
 {
     public GameObject player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform.position);
+        if (player != null)
+        {
+            transform.LookAt(player.transform.position);
+        }
+        else
+        {
+            // Try to find the player again if it's missing
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 }

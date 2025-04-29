@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     
     private bool isDialogueActive = false;
     private float previousTimeScale;
+    private bool isTriggered= false;
     
     void Start()
     {
@@ -73,12 +74,14 @@ public class DialogueManager : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !isTriggered)
         {
+            isTriggered = true;
             currentLines = areaDialogue;
             currentTip = areaTip;
             dialogueType = 1;
             ShowDialogue();
+
         }
     }
     

@@ -967,6 +967,7 @@ MonoBehaviour:
   - These gems seem to be the key to getting out of here. Try collecting more of
     them.
   - Good luck Traveler. We're counting on you
+  - Use the pause menu to exit. (Temp)
   startTip: Use WASD to Move
   areaTip: Use H & G to Change Time
   textSpeed: 0.05
@@ -4616,7 +4617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135.946}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -343, y: -108}
+  m_AnchoredPosition: {x: -334.5, y: 209.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493738552
@@ -11505,7 +11506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 197}
+  m_AnchoredPosition: {x: -5, y: 232.8}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1148203458
@@ -21703,7 +21704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161002068641534600, guid: a33b042664ee2d742bf46afa5a533573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 163.04
+      value: 327.3
       objectReference: {fileID: 0}
     - target: {fileID: 5161002068641534600, guid: a33b042664ee2d742bf46afa5a533573, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

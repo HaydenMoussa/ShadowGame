@@ -25,29 +25,55 @@ public class PauseMenu : MonoBehaviour
 
 
     public void Resume(){
-        PauseMenuUI.SetActive(false);
-        TimeSlider.SetActive(true);
-        NoteBook.SetActive(true);
+        if (PauseMenuUI != null)
+            PauseMenuUI.SetActive(false);
+        
+        if (TimeSlider != null)
+            TimeSlider.SetActive(true);
+        
+        if (NoteBook != null)
+            NoteBook.SetActive(true);
+            
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     public void Pause(){
-        PauseMenuUI.SetActive(true);
-        TimeSlider.SetActive(false);
-        NoteBook.SetActive(false);
+        if (PauseMenuUI != null)
+            PauseMenuUI.SetActive(true);
+        
+        if (TimeSlider != null)
+            TimeSlider.SetActive(false);
+        
+        if (NoteBook != null)
+            NoteBook.SetActive(false);
+            
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
     public void Quit(){
-        PauseMenuUI.SetActive(false);
-        TimeSlider.SetActive(true);
-        NoteBook.SetActive(true);
-        Time.timeScale = 1f;
+        if (PauseMenuUI != null)
+            PauseMenuUI.SetActive(false);
+        
+        if (TimeSlider != null)
+            TimeSlider.SetActive(true);
+        
+        if (NoteBook != null)
+            NoteBook.SetActive(true);
+            
         GameIsPaused = false;
+        
+        // Reset time scale
+        Time.timeScale = 1f;
+        
+        // Reset cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
+        // Load main menu
         SceneManager.LoadScene(0);
     }
 

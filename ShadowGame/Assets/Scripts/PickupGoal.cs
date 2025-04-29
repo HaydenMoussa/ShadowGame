@@ -12,12 +12,12 @@ public class PickupGoal : MonoBehaviour
         {
             pickedUp = true;
             
-            GetComponent<MeshRenderer>().enabled = false;
+            //GetComponent<MeshRenderer>().enabled = false;
             
             dialogueScript.currentLines = dialogueScript.endDialogue;
             dialogueScript.ShowDialogue();
 
-            GameManager.Instance.changeLevel("LevelSelect");
+            //GameManager.Instance.changeLevel("LevelSelect");
         }
     }
 }
