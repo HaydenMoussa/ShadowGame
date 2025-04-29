@@ -9703,6 +9703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SensX: 1000
   SensY: 1000
+  movement_active: 1
   orientation: {fileID: 2018157026}
 --- !u!114 &997540289
 MonoBehaviour:
@@ -21703,6 +21704,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 997540287}
     m_Modifications:
+    - target: {fileID: 3289249636116519770, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: m_text
+      value: 'Day 1:
+
+        After crashing here I have lost some important Data,
+        I must recover it.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4223477159404361201, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -21743,9 +21751,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5763636138327164538, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: m_text
+      value: "Shadows stretch and shift with the movement of the sun, casting quiet
+        patterns across familiar surfaces. They slip silently behind objects, echoing
+        the forms they mirror with soft distortion. Whether sharp-edged at noon or
+        elongated at dusk, shadows add depth and mystery to the ordinary. They follow
+        without sound, revealing the presence of light just as much as its absence.
+        In stillness or motion, in daylight or artificial glow, shadows serve as
+        gentle reminders that everything we see is shaped not only by what is illuminated\u2014but
+        also by what is hidden."
+      objectReference: {fileID: 0}
     - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_TagString
