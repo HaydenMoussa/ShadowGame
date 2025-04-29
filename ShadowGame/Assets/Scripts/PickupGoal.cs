@@ -16,6 +16,8 @@ public class PickupGoal : MonoBehaviour
             
             dialogueScript.currentLines = dialogueScript.endDialogue;
             dialogueScript.ShowDialogue();
+
+            GameManager.Instance.changeLevel("LevelSelect");
         }
     }
 }
