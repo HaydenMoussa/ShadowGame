@@ -7,6 +7,8 @@ public class BookManager : MonoBehaviour
 
     public GameObject closedBook;
 
+    public GameObject clock;
+
     // public GameObject testObj;
 
     public GameObject openBook;
@@ -69,6 +71,7 @@ public class BookManager : MonoBehaviour
                 movingSwitch = false;
                 if(!bookState) {
                     openBook.SetActive(false);
+                    clock.SetActive(true);
                     closedBook.SetActive(true);
                 }
             } else { 
@@ -85,6 +88,7 @@ public class BookManager : MonoBehaviour
             bookState = !bookState;
             if(bookState) {
                 //Replace closed with open. Scale open book up while moving to center of screen.
+                clock.SetActive(false);
                 PlayerCam.Instance.movement_active = false;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;

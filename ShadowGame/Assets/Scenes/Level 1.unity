@@ -6452,11 +6452,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5023827496289240853, guid: 8eeedaf774db74b8cb1a53e95954bd6b, type: 3}
   m_PrefabInstance: {fileID: 672170992}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &689188500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8639946671485474045, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
-  m_PrefabInstance: {fileID: 7586179066119262777}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &695761995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8119,8 +8114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 17910689}
   TimeSlider: {fileID: 1138868431}
-  NoteBook: {fileID: 689188500}
-  NoteBookUI: {fileID: 0}
+  NoteBook: {fileID: 400585334}
   ClockUI: {fileID: 493738550}
 --- !u!114 &831857162
 MonoBehaviour:
@@ -21836,9 +21830,25 @@ PrefabInstance:
       value: BookManager
       objectReference: {fileID: 0}
     - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: clock
+      value: 
+      objectReference: {fileID: 493738550}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: xOff.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: closedBook
       value: 
       objectReference: {fileID: 400585334}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: scaleSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
