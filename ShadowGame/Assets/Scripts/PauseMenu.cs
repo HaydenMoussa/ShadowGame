@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject TimeSlider;
     public GameObject NoteBook;
 
+    public GameObject ClockUI;
+
     // Update is called once per frame
     void Update()
     {
