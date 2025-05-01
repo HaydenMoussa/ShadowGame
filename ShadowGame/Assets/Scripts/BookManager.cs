@@ -81,25 +81,27 @@ public class BookManager : MonoBehaviour
     }
 
     public void activate() {
-        bookState = !bookState;
-        if(bookState) {
-            //Replace closed with open. Scale open book up while moving to center of screen.
-            PlayerCam.Instance.movement_active = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            openBook.SetActive(true);
-            closedBook.SetActive(false);
-            goalPos = new Vector3(xOff.y, yOff.y, zOff.y);
-            goalScale = new Vector3(xScale.y, yScale.y, zScale.y);
-            movingSwitch = true;
+        if(Time.timeScale > 0) {
+            bookState = !bookState;
+            if(bookState) {
+                //Replace closed with open. Scale open book up while moving to center of screen.
+                PlayerCam.Instance.movement_active = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                openBook.SetActive(true);
+                closedBook.SetActive(false);
+                goalPos = new Vector3(xOff.y, yOff.y, zOff.y);
+                goalScale = new Vector3(xScale.y, yScale.y, zScale.y);
+                movingSwitch = true;
 
-        } else {
-            PlayerCam.Instance.movement_active = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            goalPos = new Vector3(xOff.x, yOff.x, zOff.x);
-            goalScale = new Vector3(xScale.x, yScale.x, zScale.x);
-            movingSwitch = true;
+            } else {
+                PlayerCam.Instance.movement_active = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                goalPos = new Vector3(xOff.x, yOff.x, zOff.x);
+                goalScale = new Vector3(xScale.x, yScale.x, zScale.x);
+                movingSwitch = true;
+            }
         }
     }
 }
