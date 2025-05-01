@@ -2,6 +2,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
@@ -13,8 +14,10 @@ public class ShadowCaster : MonoBehaviour
     [SerializeField] Camera rockCamera;
 
     //[SerializeField] Projector shadowProjector;
-    [SerializeField] DecalProjector shadowProjector;
+    //[SerializeField] DecalProjector shadowProjector;
+    [SerializeField] GameObject shadowProjector;
     [SerializeField] float distanceFromPoint;
+    [SerializeField] float distanceFromPointLight;
     [SerializeField] Transform rotationPoint;
 
     [SerializeField] float shadowTurnOffAngleMax = 180;
@@ -54,7 +57,7 @@ public class ShadowCaster : MonoBehaviour
 
         shadowCamera.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
         rockCamera.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
-        shadowProjector.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPoint;
+        shadowProjector.transform.position = rotationPoint.position + -(direction * Vector3.forward) * distanceFromPointLight;
         //var angle = Mathf.Deg2Rad * lightDirection.x;
         //var tilt = Mathf.Deg2Rad * lightDirection.y;
         //var x = distanceFromPoint * Mathf.Cos(angle);
