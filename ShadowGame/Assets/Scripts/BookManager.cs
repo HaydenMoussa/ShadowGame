@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BookManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class BookManager : MonoBehaviour
 
     public GameObject clock;
 
-    // public GameObject testObj;
+    public GameObject testObj;
 
     public GameObject openBook;
 
@@ -54,14 +55,17 @@ public class BookManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // RaycastHit hit;
-        // Ray ray = playercam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Ray ray = playercam.ScreenPointToRay(Input.mousePosition);
         
-        // if (Physics.Raycast(ray, out hit)) {
-        //     Transform objectHit = hit.transform;
-        //     print(hit.transform.gameObject.tag);
-        //     testObj.transform.position = hit.point;
-        // }
+        if (Physics.Raycast(ray, out hit)) {
+            Transform objectHit = hit.transform;
+            // if(hit.transform.gameObject.tag == "Book"){
+            //     GameObject newObj = Instantiate(testObj);
+            //     newObj.transform.position = hit.point;
+            //     newObj.transform.parent = openBook.transform;
+            // }
+        }
         if(movingSwitch) {
             Vector3 dist = (goalPos - openBook.transform.localPosition);
             Vector3 scaleDist = (goalScale - openBook.transform.localScale);
