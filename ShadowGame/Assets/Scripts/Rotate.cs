@@ -15,7 +15,6 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         Vector3 rotAmount  = rotateVals * rotateSpeed * Time.deltaTime;
-        print(rotAmount);
         transform.Rotate(rotAmount);
     }
 }

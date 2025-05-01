@@ -5,6 +5,7 @@ public class Menu : MonoBehaviour
 {
     public void OnPlay()
     {
+        print("TryPlay");
         SceneManager.LoadScene(1);
         //player.SetVolume(.50f);
     }
