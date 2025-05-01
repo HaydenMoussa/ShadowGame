@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject TimeSlider;
     public GameObject NoteBook;
+    
 
     public GameObject ClockUI;
 
@@ -33,6 +34,9 @@ public class PauseMenu : MonoBehaviour
         if (TimeSlider != null)
             TimeSlider.SetActive(true);
         
+        if (ClockUI  != null)
+            ClockUI.SetActive(true);
+        
         if (NoteBook != null)
             NoteBook.SetActive(true);
             
@@ -47,6 +51,8 @@ public class PauseMenu : MonoBehaviour
         
         if (TimeSlider != null)
             TimeSlider.SetActive(false);
+        if (ClockUI  != null)
+            ClockUI.SetActive(false);
         
         if (NoteBook != null)
             NoteBook.SetActive(false);
