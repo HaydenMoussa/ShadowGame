@@ -20305,7 +20305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbc9ac2055f249979ed1c5b665c5e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevel: Level2
+  newGameLevel: LevelSelect
 --- !u!1 &1784464373 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d269f0810b2463428bc6cef8daca295, type: 3}
