@@ -17,6 +17,8 @@ public class PickupGoal : MonoBehaviour
             dialogueScript.currentLines = dialogueScript.endDialogue;
             dialogueScript.ShowDialogue();
 
+            //GameData.Instance.level2Unlocked = true;
+
             //GameManager.Instance.changeLevel("LevelSelect");
         }
     }
