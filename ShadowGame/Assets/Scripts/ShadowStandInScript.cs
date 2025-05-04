@@ -9,13 +9,15 @@ public class ShadowStandInScript : MonoBehaviour
 
     [SerializeField] private Transform[] points;
     [SerializeField] private LineRenderer line;
+    [SerializeField] private Color lineColor;
+    [SerializeField] private Material color;
 
     [SerializeField] private LayerMask layersToNotInteractWith;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        color.color = lineColor;
     }
 
     // Update is called once per frame
