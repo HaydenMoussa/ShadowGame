@@ -25347,7 +25347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8038021966337263626, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_TagString
@@ -25359,7 +25359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8639946671485474045, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: clock
@@ -25374,9 +25374,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 799425484}
     - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: bookState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
+      propertyPath: playercam
+      value: 
+      objectReference: {fileID: 997540291}
     - target: {fileID: 9031306538189875993, guid: 51368f1a572cafe4b9949546ad302f00, type: 3}
       propertyPath: closedBook
       value: 
