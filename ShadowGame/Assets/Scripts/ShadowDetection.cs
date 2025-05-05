@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ShadowDetection : MonoBehaviour
@@ -10,12 +11,27 @@ public class ShadowDetection : MonoBehaviour
 
     [SerializeField] private float timeTillDoorOpens = 2f;
 
+    [SerializeField] private Color lightColor = Color.red;
+
+    [SerializeField] private GameObject levelCompleteSoundEffect;
+
+    private Light encouragementLight;
+
+    private bool doorOpened = false;
+
     private float timer = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        encouragementLight = GetComponent<Light>();
+        if (!encouragementLight) 
+        {
+            encouragementLight = gameObject.AddComponent<Light>();
+            encouragementLight.intensity = 0;
+            encouragementLight.type = LightType.Point;
+            encouragementLight.color = lightColor;
+        }
     }
 
     // Update is called once per frame
@@ -78,9 +94,16 @@ public class ShadowDetection : MonoBehaviour
 
         if (inShadow)
         {
+            encouragementLight.intensity = 1;
             if (timer > timeTillDoorOpens)
             {
-                GameManager.Instance.levelEnded = true;
+                if (!doorOpened) 
+                {
+                    GameObject go = Instantiate(levelCompleteSoundEffect);
+                    Destroy(go, 1); ;
+                    GameManager.Instance.levelEnded = true;
+                    doorOpened = true;
+                }   
             }
             else 
             {
@@ -90,6 +113,7 @@ public class ShadowDetection : MonoBehaviour
         }
         else 
         {
+            encouragementLight.intensity = 0;
             timer = 0;
         }
     }
