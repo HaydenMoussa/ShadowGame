@@ -28,4 +28,9 @@ public class Menu : MonoBehaviour
     public void LevelSelect(){
         SceneManager.LoadScene(2);
     }
+
+    public void loadLevel2() 
+    {
+        SceneManager.LoadScene("Level 2");
+    }
 }

@@ -17421,6 +17421,8 @@ MonoBehaviour:
   pointHolder: {fileID: 1597830190}
   GemStoneRequired: 0
   timeTillDoorOpens: 2
+  lightColor: {r: 0.15395391, g: 1, b: 0, a: 1}
+  levelCompleteSoundEffect: {fileID: 1174678453829753991, guid: c135dd74d9929ec4097eab0b581432a6, type: 3}
 --- !u!1001 &1788579113
 PrefabInstance:
   m_ObjectHideFlags: 0

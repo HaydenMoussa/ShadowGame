@@ -8,7 +8,7 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.CompareTag("Player")){
             Debug.Log(collision.gameObject.name + " : " + gameObject.name + " : " + Time.time);
-            GameData.Instance.level2Unlocked = true;
+            //GameData.Instance.level2Unlocked = true;
             SceneManager.LoadScene(newGameLevel);
             
         }
