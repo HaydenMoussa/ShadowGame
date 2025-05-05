@@ -1074,7 +1074,7 @@ MonoBehaviour:
     them.
   - Good luck Traveler. We're counting on you
   - Use the pause menu to exit. (Temp)
-  startTip: Use WASD to Move
+  startTip: Use "WASD" to Move and "J" to Open the Journal
   areaTip: Use H & G to Change Time
   textSpeed: 0.05
   tipTime: 5
