@@ -774,7 +774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185.2, y: 57.9}
+  m_AnchoredPosition: {x: -220.1, y: 38.2}
   m_SizeDelta: {x: 210.2395, y: 42.0479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47983991
@@ -799,8 +799,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Machine
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
+  m_sharedMaterial: {fileID: -5188347424267081009, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -824,8 +824,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1025,12 +1025,12 @@ MonoBehaviour:
   - It seems you've been stranded somewhere along the flow of time.
   - Your first priority should be to get your bearings. Try walking around the area.
   areaDialogue:
-  - It would seem that I there have been some peculiar effects on my functionality.
-  - It seems that you have some control over the time of day.
-  - Try using this function to adjust the time as benefits you..
+  - It would seem that there have been some peculiar effects on my functionality.
+  - It looks like you have some control over the time of day.
+  - Try using this function to adjust the time as it benefits you.
   - It seems that the position of the sun will be key to finding our way out of here.
   - Try looking at that stone pillar with the gem on top.
-  - I wonder what happens if you move the sun so that that beam of light hits the
+  - I wonder what happens if you move the sun so that the beam of light hits the
     glass?
   endDialogue:
   - That gem seems to hold some power over time.
@@ -1556,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.1101
       objectReference: {fileID: 0}
+    - target: {fileID: 1237935281667626735, guid: b446042cb5f9d5b44b3f2c27fcbdad20, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1588307486936654997, guid: b446042cb5f9d5b44b3f2c27fcbdad20, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1611,6 +1615,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6318789509963685333, guid: b446042cb5f9d5b44b3f2c27fcbdad20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 580391033}
+    - targetCorrespondingSourceObject: {fileID: 6318789509963685333, guid: b446042cb5f9d5b44b3f2c27fcbdad20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 580391035}
   m_SourcePrefab: {fileID: 100100000, guid: b446042cb5f9d5b44b3f2c27fcbdad20, type: 3}
 --- !u!4 &101183323 stripped
 Transform:
@@ -6219,6 +6226,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &580391035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580391031}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.774847, y: 8.463486, z: 6.5335083}
+  m_Center: {x: -3.887528, y: 2.478218, z: 2.7668347}
 --- !u!1001 &582604033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9468,15 +9496,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: efe1a4c62dac95741a21c9b951684ccb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10239,7 +10267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.9, y: 8.9}
+  m_AnchoredPosition: {x: 13.2, y: 18.6}
   m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927508549
@@ -10264,8 +10292,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use WASD To Move
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
+  m_sharedMaterial: {fileID: -5188347424267081009, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13166,7 +13194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 284.9}
+  m_AnchoredPosition: {x: -5, y: 226.5}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1148203458
@@ -18495,8 +18523,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Traveler... are you awake? Something seems to have gone wrong...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
+  m_sharedMaterial: {fileID: -5188347424267081009, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18520,8 +18548,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18588,7 +18616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -17.1}
+  m_AnchoredPosition: {x: -26.5, y: -30.7}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1638284420
@@ -20813,7 +20841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.7, y: -83}
+  m_AnchoredPosition: {x: 189.8, y: -65.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834541856
@@ -20838,8 +20866,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press Space to Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
+  m_sharedMaterial: {fileID: -5188347424267081009, guid: 982b5d3c09cd79e49b9a56f3dd68a54d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20863,8 +20891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20901,7 +20929,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -92.084755, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21210,8 +21238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   groundDrag: 5
-  jumpForce: 10
-  jumpCoolDown: 0.25
+  jumpForce: 15
+  jumpCoolDown: 0.75
   airMultiplier: 0.4
   jumpKey: 32
   playerHeight: 20
