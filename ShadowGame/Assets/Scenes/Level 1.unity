@@ -9657,7 +9657,7 @@ MonoBehaviour:
   sensitivitySlider: {fileID: 1699545061}
   sensitivityValueText: {fileID: 340233955}
   minSensitivity: 100
-  maxSensitivity: 1000
+  maxSensitivity: 200
   PauseMenuUI: {fileID: 495225552}
   OptionsMenuUI: {fileID: 1294614505}
 --- !u!1 &837538964
@@ -11318,8 +11318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abaed7258566fe4c87ba1809483a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SensX: 1000
-  SensY: 1000
+  SensX: 100
+  SensY: 100
   movement_active: 1
   orientation: {fileID: 2018157026}
 --- !u!114 &997540289

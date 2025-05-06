@@ -7,8 +7,8 @@ public class PlayerCam : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public static PlayerCam Instance { get; private set;}
-    public float SensX = 400f;
-    public float SensY = 400f;
+    public float SensX = 100f;
+    public float SensY = 100f;
 
     public bool movement_active = true;
 
@@ -32,18 +32,16 @@ public class PlayerCam : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        // Load saved sensitivity settings if they exist
-        if (PlayerPrefs.HasKey(SensXPrefKey))
-        {
-            SensX = PlayerPrefs.GetFloat(SensXPrefKey);
-            SensY = PlayerPrefs.GetFloat(SensYPrefKey);
-        }
-        else
-        {
-            // Save default values
-            PlayerPrefs.SetFloat(SensXPrefKey, SensX);
-            PlayerPrefs.SetFloat(SensYPrefKey, SensY);
-        }
+        
+        // TEMPORARY FIX - Force sensitivity values to your desired settings
+        SensX = 100f; // Or whatever value you want
+        SensY = 100f;
+        
+        // Override any existing PlayerPrefs
+        PlayerPrefs.SetFloat(SensXPrefKey, SensX);
+        PlayerPrefs.SetFloat(SensYPrefKey, SensY);
+        
+        Debug.Log($"Sensitivity set to: X={SensX}, Y={SensY}");
     }
 
     private void Update()

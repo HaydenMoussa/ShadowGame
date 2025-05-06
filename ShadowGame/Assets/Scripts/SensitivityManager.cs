@@ -13,9 +13,10 @@ public class SensitivityManager : MonoBehaviour
     
     [Header("Sensitivity Range")]
     public float minSensitivity = 100f;
-    public float maxSensitivity = 1000f;
+    public float maxSensitivity = 200f;
     
-    private const string SensitivityPrefKey = "MouseSensitivity";
+    private const string SensXPrefKey = "SensitivityX";
+    private const string SensYPrefKey = "SensitivityY";
 
     public GameObject PauseMenuUI;
     //private bool inOptions = false;
@@ -41,40 +42,37 @@ public class SensitivityManager : MonoBehaviour
         sensitivitySlider.maxValue = maxSensitivity;
         
         // Load saved sensitivity if it exists, otherwise use current camera value
-        float savedSensitivity;
-        if (PlayerPrefs.HasKey(SensitivityPrefKey))
+        float currentSensitivity;
+        if (PlayerPrefs.HasKey(SensXPrefKey))
         {
-            savedSensitivity = PlayerPrefs.GetFloat(SensitivityPrefKey);
-            
-            // Update camera with saved value
-            playerCamera.SensX = savedSensitivity;
-            playerCamera.SensY = savedSensitivity;
+            currentSensitivity = PlayerPrefs.GetFloat(SensXPrefKey);
+            Debug.Log("Loaded sensitivity from PlayerPrefs: " + currentSensitivity);
         }
         else
         {
-            // Use current camera value
-            savedSensitivity = playerCamera.SensX;
-            PlayerPrefs.SetFloat(SensitivityPrefKey, savedSensitivity);
+            // Use current camera value if no saved preference
+            currentSensitivity = playerCamera.SensX;
+            Debug.Log("Using default camera sensitivity: " + currentSensitivity);
+            
+            // Save it to PlayerPrefs
+            PlayerPrefs.SetFloat(SensXPrefKey, currentSensitivity);
+            PlayerPrefs.SetFloat(SensYPrefKey, currentSensitivity);
         }
         
         // Set slider to current value
-        sensitivitySlider.value = savedSensitivity;
+        sensitivitySlider.value = currentSensitivity;
         
         // Register callback for slider changes
         sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
         
         // Initial text update
-        UpdateSensitivityText(savedSensitivity);
+        UpdateSensitivityText(currentSensitivity);
     }
     
     private void OnSensitivityChanged(float value)
     {
-        // Update camera sensitivity
-        playerCamera.SensX = value;
-        playerCamera.SensY = value;
-        
-        // Save to PlayerPrefs
-        PlayerPrefs.SetFloat(SensitivityPrefKey, value);
+        // Update camera sensitivity using PlayerCam's method
+        playerCamera.UpdateSensitivity(value);
         
         // Update display text
         UpdateSensitivityText(value);
