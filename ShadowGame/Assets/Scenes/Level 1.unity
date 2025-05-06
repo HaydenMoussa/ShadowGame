@@ -1074,7 +1074,7 @@ MonoBehaviour:
     them.
   - Good luck Traveler. We're counting on you
   - Use the pause menu to exit. (Temp)
-  startTip: Use "WASD" to Move and "J" to Open the Journal
+  startTip: Use "WASD" to Move and "K" to Open the Journal
   areaTip: Use H & G to Change Time
   textSpeed: 0.05
   tipTime: 5
@@ -9654,7 +9654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 997540288}
-  sensitivitySlider: {fileID: 1699545061}
+  sensitivitySlider: {fileID: 0}
   sensitivityValueText: {fileID: 340233955}
   minSensitivity: 100
   maxSensitivity: 200
@@ -13195,7 +13195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1138868432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15594,7 +15594,7 @@ RectTransform:
   m_Father: {fileID: 1086911692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16534,7 +16534,7 @@ RectTransform:
   m_Father: {fileID: 982925501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
